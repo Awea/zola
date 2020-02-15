@@ -5,7 +5,7 @@ authors = ["Vincent Prouillet <prouillet.vincent@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-tera = { version = "1", features = ["preserve_order"] }
+tera = { git = "https://github.com/Geobert/tera", branch = "fix-accentuaded-string-sort", features = ["preserve_order"] }
 syntect = "=3.2.0"
 pulldown-cmark = "0.6"
 serde = "1"
