@@ -37,7 +37,7 @@ pub fn build_index(lang: &str, library: &Library) -> Result<String> {
         }
     };
 
-    let mut index = Index::with_language(language, &["title", "body"]);
+    let mut index = Index::with_language(language, &["title", "description", "body"]);
 
     for section in library.sections_values() {
         if section.lang == lang {
@@ -74,6 +74,7 @@ fn add_section_to_index(index: &mut Index, section: &Section, library: &Library)
             &page.permalink,
             &[
                 &page.meta.title.clone().unwrap_or_default(),
+                &page.meta.description.clone().unwrap_or_default(),
                 &AMMONIA.clean(&page.content).to_string(),
             ],
         );
