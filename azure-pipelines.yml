@@ -124,7 +124,7 @@ stages:
             condition: ne( variables['Agent.OS'], 'Windows_NT' )
             inputs:
               gitHubConnection: 'zola'
-              repositoryName: 'getzola/zola'
+              repositoryName: 'Awea/zola'
               action: 'edit'
               target: '$(build.sourceVersion)'
               tagSource: 'manual'
@@ -137,7 +137,7 @@ stages:
             condition: eq( variables['Agent.OS'], 'Windows_NT' )
             inputs:
               gitHubConnection: 'zola'
-              repositoryName: 'getzola/zola'
+              repositoryName: 'Awea/zola'
               action: 'edit'
               target: '$(build.sourceVersion)'
               tagSource: 'manual'
